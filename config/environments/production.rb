@@ -30,10 +30,8 @@ Rails.application.configure do
   # Do not fallback to assets pipeline if a precompiled asset is missed.
   config.assets.compile = false
 
-  # THIS LINE IS THE ONE THAT WAS LEFT OUT OF THE TUTORIAL!
   # Enable serving of images, stylesheets, and JavaScripts from an asset server.
   # config.asset_host = 'http://assets.example.com'
-  # config.action_controller.asset_host = "https://s3-us-east-1.amazonaws.com/dev-ig-clone"
 
   # Specifies the header that your server uses for sending files.
   # config.action_dispatch.x_sendfile_header = 'X-Sendfile' # for Apache
