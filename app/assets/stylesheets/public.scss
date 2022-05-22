@@ -1,0 +1,71 @@
+// Place all the styles related to the public controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+.navbar {
+    padding: 14px 16px !important;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #ddd;
+}
+
+body.homepage .main {
+    position:relative;
+}
+
+.main {
+    min-height: 600px;
+}
+
+body.homepage .image-with-gradient .inner {
+    position:relative;
+    z-index:3;
+}
+
+body.homepage .image-with-gradient .gradient-overlay {
+    position: absolute;
+    z-index:2;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+    // content:"";
+    pointer-events: none;
+}
+
+body.homepage .image-with-gradient .blue-green-gradient {
+    background:-moz-linear-gradient(-45deg, rgba(1, 10, 12, 0.7) 0%, rgba(193, 0, 0, 0.7) 100%);
+    background:-webkit-linear-gradient(-45deg, rgba(21, 25, 26, 0.7) 0%, rgba(190, 16, 68, 0.7) 100%);
+    background:linear-gradient(135deg, rgba(2, 14, 17, 0.7) 0%, rgba(201, 21, 8, 0.7) 100%);
+}
+
+body.homepage .image-with-gradient.sunset {
+    background: transparent url(nanno-5s-02-crop.png) center center no-repeat;
+    background-size: cover;
+}
+
+.hidden>div {
+	display:none;
+  cursor: pointer;
+}
+
+.visible>div {
+	display:block;
+}
+
+/* Margins for homepage buttons */
+.col-6 > a {
+  margin-top: 5px;
+  margin-left: 1px;
+  margin-right: 1px;
+}
+
+/* Margins for Edit Profile button */
+.edit {
+  flex-wrap: nowrap !important;
+  flex-grow: none !important;
+  margin-top: 10px;
+}
+
+.edit > a {
+  display: block;
+}

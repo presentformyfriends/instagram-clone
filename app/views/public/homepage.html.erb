@@ -1,0 +1,11 @@
+<h1 class="mt-5 text-white">Welcome to Nannogram</h1>
+
+<p class="lead text-white">Please register or sign in to continue</p>
+
+<div class="row m-t-30">
+    <div class="col-6">
+        <%= link_to "Sign Up", new_account_registration_path, class: "btn btn-secondary" %>
+        <%= link_to "Sign In", new_account_session_path, class: "btn btn-success" %>
+        <%= link_to "Sign in with Facebook", account_facebook_omniauth_authorize_path, method: :post, class: "btn btn-primary" %>
+    </div>
+</div>

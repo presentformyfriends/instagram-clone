@@ -1,0 +1,17 @@
+<li class="nav-item">
+  <a class="nav-link <%= is_active?(root_path) %>" href="<%= root_path %>" aria-label="Home">
+    <i class="fa fa-home" style="font-size: 2em;"></i>
+  </a>
+</li>
+
+<li class="nav-item">
+  <a class="nav-link <%= is_active?(new_account_registration_path) %>" href="<%= new_account_registration_path %>" aria-label="Sign Up">
+    <i class="fa fa-user-plus" style="font-size: 2em;"></i>
+  </a>
+</li>
+
+<li class="nav-item">
+  <a class="nav-link <%= is_active?(new_account_session_path) %>" href="<%= new_account_session_path %>" aria-label="Sign In">
+    <i class="fa fa-user-circle" style="font-size: 2em;"></i>
+  </a>
+</li>

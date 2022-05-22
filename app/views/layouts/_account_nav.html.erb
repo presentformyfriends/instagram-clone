@@ -1,0 +1,28 @@
+<li class="nav-item">
+    <a class="nav-link <%= is_active?(dashboard_path) %>" href="<%= dashboard_path %>" aria-label="Feed">
+        <i class="fa fa-home" style="font-size: 2em;"></i>
+    </a>
+</li>
+
+<li class="nav-item">
+    <a class="nav-link <%= is_active?(new_post_path) %>" href="<%= new_post_path %>" aria-label="New Post">
+        <i class="fa fa-plus-square" style="font-size: 2em;"></i>
+    </a>
+</li>
+
+<li class="nav-item dropdown">
+    <a class="nav-link <%= is_active?(profile_path(current_account.username)) %>"
+      id="navbarDropdown" 
+      href="#" 
+      role="button" 
+      data-toggle="dropdown" 
+      aria-expanded="false"
+      aria-label="Menu">
+      <%= profile_picture(current_account) %>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+      <li><a class="dropdown-item" href="<%= profile_path(current_account.username) %>">Profile</a></li>
+      <li><hr class="dropdown-divider" /></li>
+      <li><%= link_to "Sign Out", destroy_account_session_path, method: :delete, class: "nav-link" %></li>
+    </ul>
+</li>

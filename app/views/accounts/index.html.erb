@@ -1,0 +1,46 @@
+<div class="container">
+  <div class="row">
+    <div>
+      <% @posts.each do |post| %>
+        <div class="insta-post">
+          <div class="post-meta">
+            <%= link_to image_tag(post.account.image.thumb.url, aria: { label: "User Profile" }, class: "img-circle"), profile_path(post.account.username) %>
+            <%= link_to post.account.username, profile_path(post.account.username), class: "text-dark text-decoration-none" %>
+          </div>
+          <%= link_to profile_path(post.account.username) do %>
+            <%= image_tag post.image.url, aria: { label: "User Profile" }, class: "img img-fluid" %>
+          <% end %>
+          <div class="post-details">
+            <div class="post-actions">              
+              <i class="fa fa-heart fa-2x like-<%= post.id %> <%= 'active' if post_liked_by_user?(post.id) %> post-like" data-id="<%= post.id %>"></i>                                          
+              <%= link_to( ("<i class='fa fa-comment fa-2x post-comment'></i>").html_safe, "/dashboard", aria: { label: "View Comments" }, data: {toggle: "modal", target: "#commentModal#{ post.id }"}) %>                
+              <div class="modal fade" id="commentModal<%= post.id %>" tabindex="-1">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h4 class="modal-title">Comments</h4>
+                      <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>      
+                    </div>
+                    <div class="modal-body">                        
+                      <%= render "posts/comments", post: post, comments: Comment.includes(:account).where(post_id: post.id) %>                                                
+                      <%= form_for @comment do |f| %>
+                        <%= f.hidden_field :post_id, value: post.id %>
+                        <div class="input-group">
+                          <%= f.text_field :comment, placeholder: "Add comment here...", class: "form-control post-comment", aria: { labelledby: "new_comment" } %>
+                          <div class="input-group-append">
+                            <%= f.submit "Post", class: "btn btn-success float-end" %>
+                          </div>
+                        </div>
+                      <% end %>                
+                    </div>
+                  </div>
+                </div>
+              </div>              
+            </div>
+            <p><strong id="post-<%= post.id %>-likes"><%= post.total_likes_count %> likes</strong></p>
+            <%= simple_format post.description %>
+            <p class="text-muted"><%= time_ago_in_words post.created_at %> ago</p>            
+          </div>
+        </div>
+      <% end %>
+    </div>

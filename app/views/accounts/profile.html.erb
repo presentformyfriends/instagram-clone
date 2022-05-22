@@ -1,0 +1,72 @@
+<div class="container">
+    <div class="row">
+        <div class="col-4">
+          <%= profile_picture @account, 100 %>
+        </div>
+        <div class="col-8 text-start">
+            <div class="row">
+                <div class="col-6">
+                    <span class="edit float-end">
+                      <%= link_to "Edit Profile", edit_account_registration_path, class: "btn btn-custom float-end" if can_edit_profile?(@account.id) %>
+                    </span>
+                    <h1><%= @account.full_name %></h1>
+                </div>
+            </div>
+            <div class="row profile-stats">
+                <div class="col-4 wrap-proper">
+                    <%= @account.posts.count %> posts
+                </div>
+                <div class="col-4 wrap-proper">
+                    <%= @account.total_followers %> followers
+                </div>
+                <div class="col-4 wrap-proper">
+                    <%= @account.total_following %> following
+                </div>
+            </div>
+            <p><%= @account.full_name %></p>
+            <%= simple_format @account.description %>
+            <p><%= link_to @account.website, @account.website if @account.website.present? %></p>
+        </div>
+    </div>
+    <div class="row profile-posts">
+        <% @posts.each do |post| %>
+          <div class="col-sm-4 wrap-proper">
+            <div class="insta-post post-square" style="background: url(<%= post.image.url %>) no-repeat center top">
+                <%= link_to( ("<i class='fa fa-comment fa-2x post-comment'></i>").html_safe, profile_path, aria: { label: 'Post Comment' }, data: {toggle: "modal", target: "#commentModal#{ post.id }"}) %>                                  
+                <div class="modal fade" id="commentModal<%= post.id %>" tabindex="-1">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h4 class="modal-title">Comments</h4>
+                      <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>      
+                    </div>
+                    <div class="modal-body">
+                      <%= render "posts/comments", post: post, comments: Comment.includes(:account).where(post_id: post.id) %>                          
+                      <%= form_for @comment do |f| %>
+                        <%= f.hidden_field :post_id, value: post.id %>
+                        <div class="input-group">
+                          <%= f.text_field :comment, placeholder: "Add comment here...", class: "form-control post-comment", aria: { labelledby: "new_comment" } %>
+                          <div class="input-group-append">
+                            <%= f.submit "Post", class: "btn btn-success float-end" %>
+                          </div>
+                        </div>
+                      <% end %>                
+                    </div>
+                  </div>
+                </div>
+              </div>
+                    <div class="post-stats">
+                        <div class="inner">
+                            <i class="fa fa-heart"></i><%= post.total_likes_count %>
+                            <i class="fa fa-comment m-l-15"></i><%= post.total_comments_count %>
+                        </div>
+                    </div>
+            </div>
+        </div>
+        <% end %>
+    </div>
+  <div class="follower-suggestions">
+    <p class="text-muted">Suggestions for you</p>
+    <%= render "accounts/follower_suggestions" %>
+  </div>
+</div>
