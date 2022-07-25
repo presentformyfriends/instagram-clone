@@ -127,3 +127,10 @@ build-iPhoneSimulator/
 # Ignore other secret files
 /config/initializers/secret_token.rb
 /config/secrets.yml
+
+# Ignore ".ssh" directories
+/.ssh
+.ssh/
+
+# Ignore 'zone identifier' files
+**/*Zone.Identifier
