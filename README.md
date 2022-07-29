@@ -3,9 +3,9 @@
 ![nanno-phone-laugh.jpg](img/nanno-phone-laugh.jpg)
 
 # Instagram Clone
-![GitHub Last Commit](https://img.shields.io/github/last-commit/presentformyfriends/instagram-clone?color=hotpink&logo=git&logoColor=pink) ![Ruby Version](https://img.shields.io/badge/ruby-3.0.2-hotpink?logo=ruby&logoColor=pink) ![Rails version](https://img.shields.io/badge/rails-6.1.4.4-hotpink?logo=ruby&logoColor=pink) ![Heroku](https://img.shields.io/badge/platform-heroku-hotpink?logo=heroku&logoColor=pink) ![Repo Size](https://img.shields.io/github/repo-size/presentformyfriends/instagram-clone?color=hotpink&logo=github&logoColor=pink) [![Build Status](https://img.shields.io/endpoint.svg?url=https%3A%2F%2Factions-badge.atrox.dev%2Fpresentformyfriends%2Finstagram-clone%2Fbadge%3Fref%3Dmaster&style=flat?color=hotpink&logo=github&logoColor=pink)](https://actions-badge.atrox.dev/presentformyfriends/instagram-clone/goto?ref=master)
+![GitHub Last Commit](https://img.shields.io/github/last-commit/presentformyfriends/instagram-clone?color=hotpink&logo=git&logoColor=pink) ![Ruby Version](https://img.shields.io/badge/ruby-3.0.2-hotpink?logo=ruby&logoColor=pink) ![Rails version](https://img.shields.io/badge/rails-6.1.4.4-hotpink?logo=ruby&logoColor=pink) ![Heroku](https://img.shields.io/badge/platform-heroku-hotpink?logo=heroku&logoColor=pink) ![Repo Size](https://img.shields.io/github/repo-size/presentformyfriends/instagram-clone?color=hotpink&logo=github&logoColor=pink)
 
-[![Website shields.io](https://img.shields.io/website-up-down-default-default/http/shields.io.svg?logo=ruby&logoColor=pink)](https://nannogram.herokuapp.com/) ![w3c validation](https://img.shields.io/w3c-validation/default?logo=w3c&logoColor=pink&targetUrl=https%3A%2F%2Fnannogram.herokuapp.com) 
+[![Website shields.io](https://img.shields.io/website-up-down-default-default/http/shields.io.svg?logo=ruby&logoColor=pink)](https://nannogram.herokuapp.com/) ![w3c validation](https://img.shields.io/w3c-validation/default?logo=w3c&logoColor=pink&targetUrl=https%3A%2F%2Fnannogram.herokuapp.com) [![Build Status](https://img.shields.io/endpoint.svg?url=https%3A%2F%2Factions-badge.atrox.dev%2Fpresentformyfriends%2Finstagram-clone%2Fbadge%3Fref%3Dmaster&style=flat?color=hotpink&logo=github&logoColor=pink)](https://actions-badge.atrox.dev/presentformyfriends/instagram-clone/goto?ref=master)
 
 </div>
 
