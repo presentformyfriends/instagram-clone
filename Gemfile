@@ -42,6 +42,7 @@ gem 'webpacker', '~> 5.0'
 
 # File handling for S3 Bucket
 gem 'carrierwave-aws'
+gem "aws-sdk-s3", require: false
 
 # Image resizing
 gem 'mini_magick'
@@ -78,7 +79,3 @@ group :test do
   # Easy installation and use of web drivers to run system tests with browsers
   gem 'webdrivers'
 end
-
-# Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-gem "aws-sdk-s3", require: false
