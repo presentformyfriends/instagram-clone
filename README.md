@@ -10,7 +10,7 @@
 </div>
 
 ## UPDATE
-Website currently offline while moving to alternate deployment solution
+Web app currently offline while moving to alternate deployment solution
 
 ## Overview
 Responsive web app based on Instagram; content inspired by the Netflix series *Girl from Nowhere*. WCAG 2.1 conformant.
